@@ -1,25 +1,66 @@
 aid: daily-gobble
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/daily-gobble.png
 name: Daily Gobble
-description: Daily Gobble is a company surfaced as a portfolio company of 500-global and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: Daily Gobble was added to the API Evangelist network as a portfolio-lead
+  stub sourced from the 500 Global portfolio. A 2026-07-20 enrichment pass found no
+  operating company behind it. The dailygobble.com domain is a GoDaddy parked domain
+  that serves a JavaScript redirect to a /lander page, carries no MX records, and
+  publishes no content. The relevantmobile.com URL carried on the original stub does
+  not belong to Daily Gobble; it now serves an unrelated Indonesian-language gambling
+  and SEO spam site, and it has been removed rather than retained as a Website pointer.
+  No first-party client libraries were found on npm or PyPI. There is no API,
+  developer program, documentation, or event surface to enrich. This profile is
+  retained as a historical record.
 url: https://raw.githubusercontent.com/api-evangelist/daily-gobble/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - 500-global
 x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier-reason: defunct-no-api-surface
+x-status: defunct
+x-status-reason: 'No operating web presence: dailygobble.com resolves to a GoDaddy
+  parking lander and has no mail exchanger. Verified by direct probe 2026-07-20.'
+x-domain-status: parked
+x-domain-note: dailygobble.com is parked with GoDaddy (NS ns61/ns62.domaincontrol.com,
+  lander served from img1.wsimg.com/parking-lander). The parking host answers HTTP
+  200 for EVERY path, including deliberately non-existent ones, so /.well-known/*,
+  /llms.txt and /openapi.json all return soft-200s that are the parking stub rather
+  than real artifacts. Do not record these as discovered documents on a future pass.
+x-unverified: Operating history, product vertical, funding detail, and shutdown date
+  could not be confirmed during this pass because web search was unavailable. A
+  search-enabled re-run could complete the historical record; it would not change
+  the finding that there is no API surface.
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
 tags:
 - Company
+- Defunct
+- Portfolio Lead
 apis: []
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-common:
-- type: Website
-  url: https://relevantmobile.com
+common: []
+x-enrichment:
+  date: '2026-07-20'
+  status: nochange
+  artifacts_added: 0
+  pass: local-v1
+  note: 'Probe-only pass. Direct HTTP/DNS/registry probing completed and was decisive
+    (parked domain, no API surface); WebSearch budget was exhausted and the WebFetch
+    classifier was unavailable, so company history remains unverified.'
