@@ -42,7 +42,7 @@ x-unverified: Operating history, product vertical, funding detail, and shutdown 
   could not be confirmed during this pass because web search was unavailable. A
   search-enabled re-run could complete the historical record; it would not change
   the finding that there is no API surface.
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-20'
 tags:
